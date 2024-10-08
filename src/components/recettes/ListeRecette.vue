@@ -4,7 +4,8 @@
 
     <div class="d-flex justify-content-between mb-4">
       <input 
-        type="text" 
+        type="text"
+        maxlength="100" 
         class="form-control w-50"
         :placeholder= "$t('recette.list.holder')"
         v-model="searchQuery"
@@ -15,9 +16,9 @@
     </div>
     
     <div class="contact-list-table">
-      <table class="table table-hover table-bordered">
+      <table class="table table-bordered table-striped">
         <thead>
-          <tr>
+          <tr class="table-active">
             <th scope="col">#</th>
             <th scope="col">{{ $t("recette.list.col1") }}</th>
             <th scope="col">{{ $t("recette.list.col2") }}</th>
@@ -30,8 +31,8 @@
           <tr v-if="filteredRecettes.length === 0">
             <td colspan="6" class="text-center">{{ $t("recette.list.data") }}</td>
           </tr>
-          <tr v-for="item in filteredRecettes" :key="item.id">
-            <td scope="row">{{ `# ${item.id} ` }}</td>
+          <tr v-for="(item, index) in filteredRecettes" :key="item.id">
+            <td scope="row">{{ index + 1 }}</td>
             <td>{{ item.titre }}</td>
             <td>{{ item.ingredients }}</td>
             <td>{{ item.type }}</td>

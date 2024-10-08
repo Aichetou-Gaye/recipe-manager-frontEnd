@@ -1,11 +1,11 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <router-link to="/" class="navbar-brand" activeClass="active">
+    <nav class="navbar navbar-expand bg-dark fixed-top">
+      <div class="container">
+        <router-link to="/" class="navbar-brand">
           <img src="/src/assets/recipeLogo.jpg" alt="Logo" class="logo">
         </router-link>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <router-link to="/recette" class="nav-link text-white" activeClass="active">{{ $t("home.title1") }}</router-link>
@@ -24,18 +24,16 @@
         </div>
       </div>
     </nav>
-    <router-view/>
+    <div class="content mt-5 pt-5">
+      <router-view />
+    </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { useRecetteStore } from './store/recetteStore';
 import { useI18n } from 'vue-i18n';
 const t = useI18n();
 const { locale } = useI18n();
-const recetteStore = useRecetteStore();
-const noResults = ref(false);
 
 function changeLanguage(event) {
   locale.value = event.target.value;

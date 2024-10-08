@@ -7,9 +7,9 @@
       </router-link>
     </div>
     <div class="contact-list-table">
-      <table class="table table-hover table-bordered">
+      <table class="table table-striped table-bordered">
         <thead>
-          <tr>
+          <tr class="table-active">
             <th scope="col">#</th>
             <th scope="col">{{ $t("categorie.list.col1") }}</th>
             <th scope="col" class="text-center">Actions</th>
