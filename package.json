@@ -1,5 +1,5 @@
 {
-  "name": "gestion-recettes",
+  "name": "recipe-manager",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,6 +8,16 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aichetou-Gaye/recipe-manager-frontEnd.git"
+  },
+  "author": "Aichetou Gaye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aichetou-Gaye/recipe-manager-frontEnd/issues"
+  },
+  "homepage": "https://github.com/Aichetou-Gaye/recipe-manager-frontEnd#readme",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-brands-svg-icons": "^6.6.0",

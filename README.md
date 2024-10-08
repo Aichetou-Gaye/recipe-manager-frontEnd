@@ -1,4 +1,4 @@
-# Gestion Recette FrontEnd
+# Recipe Manager FrontEnd
 
 Ce projet est une application web de gestion de recettes développée avec Vue.js 3, Pinia pour la gestion d'état, et Vue Router pour la navigation. L'application permet aux utilisateurs de créer, lister, modifier et supprimer des recettes et des catégories.
 
@@ -33,13 +33,13 @@ Ce projet est une application web de gestion de recettes développée avec Vue.j
 1. Clonez le dépôt :
 
 ```bash
-git clone https://github.com/Aichetou-Gaye/gestion-recette-frontEnd.git
+git clone https://github.com/Aichetou-Gaye/recipe-manager-frontEnd.git
 ```
 
 2. Accédez au répertoire du projet :
 
 ```bash
-cd gestion-recette-frontEnd
+cd recipe-manager-frontEnd
 ```
 
 3. Installez les dépendances :
@@ -76,7 +76,5 @@ cd gestion-recette-frontEnd
 
 ##  Auteur
 [Aichetou Gaye](https://github.com/Aichetou-Gaye/)
-
-[Mohamed Bankolé](https://github.com/medbankole97)
 
 
