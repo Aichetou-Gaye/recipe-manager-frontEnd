@@ -1,11 +1,10 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <router-link to="/" class="navbar-brand" activeClass="active">
           <img src="/src/assets/recipeLogo.jpg" alt="Logo" class="logo">
         </router-link>
-
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -25,23 +24,7 @@
         </div>
       </div>
     </nav>
-  
-    <div class="content mt-5 pt-5">
-      <router-view />
-      <div v-if="recetteStore.searchResults.length">
-        <h3>Résultats de recherche :</h3>
-        <ul>
-          <li v-for="recette in recetteStore.searchResults" :key="recette.id">
-            {{ recette.titre }}
-          </li>
-        </ul>
-      </div>
-      <div v-else-if="noResults">
-        <div class="alert alert-warning" role="alert">
-          Aucune recette trouvée
-        </div>
-      </div>
-    </div>
+    <router-view/>
   </div>
 </template>
 

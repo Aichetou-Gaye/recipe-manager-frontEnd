@@ -9,6 +9,7 @@ export const useCategorieStore = defineStore("categorieStore", {
     categorieForm: reactive({
       nom: null,
     }),
+    recipes:[]
   }),
   actions: {
     async loadDataFromApi() {
@@ -39,8 +40,8 @@ export const useCategorieStore = defineStore("categorieStore", {
       return resp.data
     },
     async recipes(id) {
-      await axios.get(`http://localhost:3022/categories/recipes/${id}`);
-      await this.loadDataFromApi();
+      const resp = await axios.get(`http://localhost:3022/categories/recipes/${id}`);
+      return resp.data;
     },
     async resetForm() {
       this.categorieForm.nom= null;
